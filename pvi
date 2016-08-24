@@ -224,7 +224,7 @@ def get_bundles():
             w! /tmp/bundles.json
             """)
         tempf.file.flush()
-        subprocess.check_call(['vim', '-X', '+so %s' % tempf.name, '+qa'])
+        subprocess.check_call(['vim', '+so %s' % tempf.name, '+qa'])
     with open("/tmp/bundles.json", "r") as fin:
         bundles = json.load(fin)
         if bundles:
